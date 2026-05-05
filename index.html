@@ -4,128 +4,129 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Black Forest Ward Campout 2025</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<title>Black Forest Ward Campout 2026</title>
 <style>
-  :root {
-    --sand: #e8d5a3;
-    --dusk: #2c3e50;
-    --rust: #c0392b;
-    --sage: #5d8a6a;
-    --sky: #5b8fa8;
-    --cream: #fdf6e3;
-    --dark: #1a1a2e;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lato:wght@300;400;700&display=swap');
+
+:root {
+–sand: #e8d5a3;
+–dusk: #2c3e50;
+–rust: #c0392b;
+–sage: #5d8a6a;
+–sky: #5b8fa8;
+–cream: #fdf6e3;
+}
 
 - { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
 background: var(–cream);
 color: var(–dusk);
-font-family: ‘Lato’, sans-serif;
+font-family: ‘Lato’, Georgia, serif;
 font-weight: 300;
 line-height: 1.7;
 }
 
-/* Hero */
+/* ── HERO ── */
 .hero {
-background: linear-gradient(160deg, var(–dusk) 0%, #3d5a73 50%, var(–sky) 100%);
+background: linear-gradient(160deg, #1a2a3a 0%, #2c4a60 55%, #4a7a96 100%);
 color: white;
-padding: 3rem 1.5rem 4rem;
+padding: 3rem 1.5rem 5rem;
 text-align: center;
 position: relative;
-overflow: hidden;
 }
 
-.hero::before {
-content: ‘’;
+.hero-wave {
 position: absolute;
-bottom: 0; left: 0; right: 0;
-height: 80px;
-background: url(“data:image/svg+xml,%3Csvg xmlns=‘http://www.w3.org/2000/svg’ viewBox=‘0 0 1200 80’%3E%3Cpath d=‘M0,80 Q150,20 300,50 Q450,80 600,40 Q750,0 900,50 Q1050,80 1200,30 L1200,80 Z’ fill=’%23fdf6e3’/%3E%3C/svg%3E”);
-background-size: cover;
+bottom: -1px;
+left: 0;
+width: 100%;
+overflow: hidden;
+line-height: 0;
+}
+
+.hero-wave svg {
+display: block;
+width: 100%;
+height: 60px;
 }
 
 .ward-label {
-font-family: ‘Lato’, sans-serif;
+font-size: 0.72rem;
 font-weight: 700;
-font-size: 0.75rem;
-letter-spacing: 0.25em;
+letter-spacing: 0.28em;
 text-transform: uppercase;
-color: var(–sand);
-margin-bottom: 0.5rem;
+color: #e8d5a3;
+margin-bottom: 0.6rem;
 }
 
 .hero h1 {
-font-family: ‘Playfair Display’, serif;
-font-size: clamp(2.2rem, 6vw, 3.8rem);
+font-family: ‘Playfair Display’, Georgia, serif;
+font-size: clamp(2rem, 6vw, 3.5rem);
 font-weight: 900;
 line-height: 1.15;
-margin-bottom: 0.5rem;
-text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+margin-bottom: 0.4rem;
+text-shadow: 0 2px 20px rgba(0,0,0,0.4);
 }
 
-.hero h1 span { color: var(–sand); }
+.hero h1 span { color: #e8d5a3; }
 
 .hero-sub {
-font-size: 1.1rem;
+font-size: 1rem;
 font-weight: 300;
-opacity: 0.9;
-margin-bottom: 1.5rem;
+opacity: 0.85;
+letter-spacing: 0.04em;
+margin-bottom: 1.4rem;
 }
 
 .date-badge {
 display: inline-block;
-background: var(–rust);
+background: #c0392b;
 color: white;
-font-family: ‘Playfair Display’, serif;
-font-size: 1.2rem;
+font-family: ‘Playfair Display’, Georgia, serif;
+font-size: 1.1rem;
 font-weight: 700;
-padding: 0.5rem 1.5rem;
-border-radius: 2px;
-letter-spacing: 0.05em;
+padding: 0.5rem 1.8rem;
+letter-spacing: 0.04em;
 }
 
-/* RSVP Banner */
+/* ── RSVP BANNER ── */
 .rsvp-banner {
-background: var(–sage);
+background: #5d8a6a;
 color: white;
 text-align: center;
-padding: 1.2rem;
+padding: 1rem 1.5rem;
+font-size: 1rem;
 }
 
 .rsvp-banner a {
 color: white;
 font-weight: 700;
-font-size: 1.1rem;
-text-decoration: none;
-border-bottom: 2px solid rgba(255,255,255,0.5);
-padding-bottom: 2px;
+text-decoration: underline;
+text-underline-offset: 3px;
 }
 
-.rsvp-banner a:hover { border-color: white; }
-
-/* Content */
+/* ── CONTAINER ── */
 .container {
-max-width: 780px;
+max-width: 760px;
 margin: 0 auto;
 padding: 2.5rem 1.5rem;
 }
 
 .intro-note {
 background: #fff8e8;
-border-left: 4px solid var(–rust);
+border-left: 4px solid #c0392b;
 padding: 1rem 1.2rem;
 margin-bottom: 2.5rem;
 font-size: 0.95rem;
 border-radius: 0 4px 4px 0;
 }
 
-/* Sections */
+/* ── SECTIONS ── */
 .section {
 margin-bottom: 2.5rem;
 padding-bottom: 2.5rem;
-border-bottom: 1px solid #e0d8c8;
+border-bottom: 1px solid #e0d4be;
 }
 
 .section:last-child { border-bottom: none; }
@@ -134,78 +135,60 @@ border-bottom: 1px solid #e0d8c8;
 display: flex;
 align-items: center;
 gap: 0.8rem;
-margin-bottom: 0.8rem;
+margin-bottom: 0.9rem;
 }
 
 .section-icon {
-width: 36px;
-height: 36px;
+width: 38px;
+height: 38px;
 border-radius: 50%;
 display: flex;
 align-items: center;
 justify-content: center;
-font-size: 1.1rem;
+font-size: 1.15rem;
 flex-shrink: 0;
 }
 
-.icon-sand { background: #f0e6cc; }
-.icon-sky  { background: #d4e8f0; }
-.icon-sage { background: #d4e8da; }
-.icon-rust { background: #f0d4d4; }
+.ic-sand  { background: #f0e6cc; }
+.ic-sky   { background: #d4e8f0; }
+.ic-sage  { background: #d4e8da; }
+.ic-rust  { background: #f0d4d4; }
 
 .section h2 {
-font-family: ‘Playfair Display’, serif;
+font-family: ‘Playfair Display’, Georgia, serif;
 font-size: 1.35rem;
 font-weight: 700;
-color: var(–dusk);
+color: #1a2a3a;
 }
 
 .section p { margin-bottom: 0.8rem; font-size: 0.97rem; }
 .section p:last-child { margin-bottom: 0; }
 
-/* Links */
-a.map-link {
+/* ── BUTTONS ── */
+.btn-link {
 display: inline-flex;
 align-items: center;
-gap: 0.4rem;
-background: var(–sky);
+gap: 0.35rem;
+background: #5b8fa8;
 color: white;
-padding: 0.35rem 0.9rem;
+padding: 0.38rem 1rem;
 border-radius: 20px;
-font-size: 0.85rem;
+font-size: 0.84rem;
 font-weight: 700;
 text-decoration: none;
-margin-top: 0.4rem;
-transition: background 0.2s;
+margin: 0.4rem 0.3rem 0 0;
 }
 
-a.map-link:hover { background: var(–dusk); }
+.btn-link:hover { background: #1a2a3a; }
 
-a.info-link {
-color: var(–sky);
+.text-link {
+color: #5b8fa8;
 font-weight: 700;
 text-decoration: none;
-border-bottom: 1px dashed var(–sky);
+border-bottom: 2px dashed #5b8fa8;
 }
 
-/* Checklist */
-.checklist {
-display: flex;
-flex-wrap: wrap;
-gap: 0.5rem;
-margin-top: 0.8rem;
-}
-
-.checklist-item {
-background: var(–cream);
-border: 1px solid #d8cbb0;
-border-radius: 20px;
-padding: 0.3rem 0.85rem;
-font-size: 0.88rem;
-font-weight: 400;
-}
-
-/* Warning box */
+/* ── WARNING BOX ── */
 .warning-box {
 background: #fff3e0;
 border: 1px solid #f5a623;
@@ -213,56 +196,70 @@ border-radius: 6px;
 padding: 0.9rem 1.1rem;
 font-size: 0.93rem;
 margin-top: 0.8rem;
+line-height: 1.6;
 }
 
 .warning-box strong { color: #c85000; }
 
-/* Itinerary timeline */
+/* ── TIMELINE ── */
 .timeline {
-margin-top: 0.8rem;
-padding-left: 1rem;
-border-left: 3px solid var(–sand);
+margin-top: 0.9rem;
+padding-left: 1.2rem;
+border-left: 3px solid #e8d5a3;
 }
 
-.timeline-item {
+.tl-item {
 position: relative;
-padding: 0.4rem 0 0.4rem 1rem;
+padding: 0.45rem 0 0.45rem 1.1rem;
 font-size: 0.95rem;
 }
 
-.timeline-item::before {
+.tl-item::before {
 content: ‘’;
 position: absolute;
-left: -1.45rem;
+left: -1.5rem;
 top: 50%;
 transform: translateY(-50%);
 width: 10px;
 height: 10px;
 border-radius: 50%;
-background: var(–rust);
-border: 2px solid var(–cream);
+background: #c0392b;
+border: 2px solid #fdf6e3;
+box-shadow: 0 0 0 1px #c0392b;
 }
 
-.timeline-time {
+.tl-time {
 font-weight: 700;
-color: var(–rust);
-margin-right: 0.5rem;
+color: #c0392b;
+margin-right: 0.4rem;
 }
 
-/* Footer */
+/* ── CHECKLIST ── */
+.checklist {
+display: flex;
+flex-wrap: wrap;
+gap: 0.5rem;
+margin-top: 0.8rem;
+}
+
+.chip {
+background: white;
+border: 1px solid #d8cbb0;
+border-radius: 20px;
+padding: 0.32rem 0.9rem;
+font-size: 0.87rem;
+}
+
+/* ── FOOTER ── */
 .footer {
-background: var(–dusk);
-color: rgba(255,255,255,0.7);
+background: #1a2a3a;
+color: rgba(255,255,255,0.65);
 text-align: center;
 padding: 1.5rem;
 font-size: 0.85rem;
 }
 
 .footer strong { color: white; }
-
-@media (max-width: 500px) {
-.hero { padding: 2rem 1rem 3rem; }
-}
 </style>
 
 </head>
@@ -270,9 +267,14 @@ font-size: 0.85rem;
 
 <div class="hero">
   <div class="ward-label">Black Forest Ward</div>
-  <h1>Great Sand Dunes<br><span>Campout 2025</span></h1>
+  <h1>Great Sand Dunes<br><span>Campout 2026</span></h1>
   <div class="hero-sub">Great Sand Dunes Oasis Campground</div>
-  <div class="date-badge">May 15–16, 2025</div>
+  <div class="date-badge">May 15 – 16, 2026</div>
+  <div class="hero-wave">
+    <svg viewBox="0 0 1200 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,60 Q150,10 300,35 Q450,60 600,25 Q750,0 900,30 Q1050,55 1200,20 L1200,60 Z" fill="#fdf6e3"/>
+    </svg>
+  </div>
 </div>
 
 <div class="rsvp-banner">
@@ -285,25 +287,20 @@ font-size: 0.85rem;
     If you've already let Evan know you're coming, you don't need to fill out the RSVP form. The head count helps with breakfast planning!
   </div>
 
-  <!-- Campground -->
-
   <div class="section">
     <div class="section-header">
-      <div class="section-icon icon-sage">⛺</div>
+      <div class="section-icon ic-sage">⛺</div>
       <h2>Campground</h2>
     </div>
     <p>We're staying at <strong>The Great Sand Dunes Oasis</strong>, located just a couple miles outside the park entrance. We have <strong>Group Sites 2 &amp; 3</strong> on the upper loop — primitive sites only.</p>
     <p>Good for tents and maybe small travel trailers, but the road is tight and rough. <strong>Don't bring anything large</strong> — it may be damaged by trees/brush and difficult to fit.</p>
-    <a class="map-link" href="https://goo.gl/maps/MXX5sXKrXr8dZyMb8" target="_blank">📍 Campground Directions</a>
-    &nbsp;
-    <a class="map-link" href="https://greatdunes.com/blog/" target="_blank">🗺 Campground Map</a>
+    <a class="btn-link" href="https://goo.gl/maps/MXX5sXKrXr8dZyMb8" target="_blank">📍 Campground Directions</a>
+    <a class="btn-link" href="https://greatdunes.com/blog/" target="_blank">🗺 Campground Map</a>
   </div>
-
-  <!-- Check In -->
 
   <div class="section">
     <div class="section-header">
-      <div class="section-icon icon-sky">✅</div>
+      <div class="section-icon ic-sky">✅</div>
       <h2>Check-In</h2>
     </div>
     <p>Everyone must <strong>check in at the main office</strong> before proceeding to camp. There is a <strong>$7/person charge</strong>. Tell them you're with the Black Forest church group — reservation is also under <strong>Evan's name</strong>.</p>
@@ -312,86 +309,75 @@ font-size: 0.85rem;
     </div>
   </div>
 
-  <!-- Itinerary -->
-
   <div class="section">
     <div class="section-header">
-      <div class="section-icon icon-sand">📅</div>
+      <div class="section-icon ic-sand">📅</div>
       <h2>Itinerary</h2>
     </div>
     <div class="timeline">
-      <div class="timeline-item"><span class="timeline-time">Friday eve</span> Arrive, get settled. Campfires planned (no fire bans currently).</div>
-      <div class="timeline-item"><span class="timeline-time">Sat 8:00 AM</span> Group breakfast at camp.</div>
-      <div class="timeline-item"><span class="timeline-time">Sat 11:00 AM</span> Break camp — must be out of group site by 11 AM.</div>
-      <div class="timeline-item"><span class="timeline-time">Saturday</span> Head into Great Sand Dunes National Park to Castle Creek Picnic Area.</div>
+      <div class="tl-item"><span class="tl-time">Friday eve</span> Arrive &amp; get settled. Campfires planned (no fire bans currently).</div>
+      <div class="tl-item"><span class="tl-time">Sat 8:00 AM</span> Group breakfast at camp.</div>
+      <div class="tl-item"><span class="tl-time">Sat 11:00 AM</span> Break camp — must vacate group site by 11 AM.</div>
+      <div class="tl-item"><span class="tl-time">Saturday</span> Head into Great Sand Dunes National Park → Castle Creek Picnic Area.</div>
     </div>
   </div>
 
-  <!-- The Park -->
-
   <div class="section">
     <div class="section-header">
-      <div class="section-icon icon-sky">🏜</div>
+      <div class="section-icon ic-sky">🏜️</div>
       <h2>Great Sand Dunes National Park</h2>
     </div>
-    <p>Hopefully Medano Creek will be flowing! <strong>A National Park permit is required</strong> to enter. There's a large parking lot where you can hike to the dunes or stage a vehicle.</p>
-    <a class="map-link" href="https://goo.gl/maps/S33XmCmgiLY95kpM7" target="_blank">📍 Parking Lot Directions</a>
+    <p>Hopefully Medano Creek will be flowing! <strong>A National Park permit is required</strong> to enter. There's a large parking lot where you can hike to the dunes or stage a vehicle before heading further in.</p>
+    <a class="btn-link" href="https://goo.gl/maps/S33XmCmgiLY95kpM7" target="_blank">📍 Parking Lot Directions</a>
   </div>
-
-  <!-- Castle Creek -->
 
   <div class="section">
     <div class="section-header">
-      <div class="section-icon icon-rust">🏔</div>
+      <div class="section-icon ic-rust">🏔️</div>
       <h2>Castle Creek Picnic Area</h2>
     </div>
-    <p>Our Saturday destination — a great spot with picnic tables and bathrooms where we can play in the creek and sand. Located <strong>2.6 miles down the Medano Pass Primitive Road</strong>.</p>
+    <p>Our Saturday destination — great spot with picnic tables and bathrooms where we can play in the creek and sand. Located <strong>2.6 miles down the Medano Pass Primitive Road</strong>.</p>
     <div class="warning-box">
-      <strong>4WD required</strong> (NOT all-wheel drive) with high clearance. You may need to air down tires. There's an air compressor at the start of the primitive road. <strong>Parking is limited — consolidate vehicles at the main lot</strong> and go early!
+      <strong>4WD required</strong> (NOT all-wheel drive) with high clearance. You may need to air down tires — there's an air compressor at the start of the primitive road. <strong>Parking is very limited — consolidate vehicles at the main lot and go early!</strong>
     </div>
     <br>
-    <a class="map-link" href="https://www.nps.gov/grsa/planyourvisit/medano-pass-road.htm" target="_blank">ℹ️ Medano Pass Info</a>
-    &nbsp;
-    <a class="map-link" href="https://goo.gl/maps/Pviux2pmhTAdjczx5" target="_blank">📍 Castle Creek Directions</a>
+    <a class="btn-link" href="https://www.nps.gov/grsa/planyourvisit/medano-pass-road.htm" target="_blank">ℹ️ Medano Pass Info</a>
+    <a class="btn-link" href="https://goo.gl/maps/Pviux2pmhTAdjczx5" target="_blank">📍 Castle Creek Directions</a>
   </div>
-
-  <!-- Packing List -->
 
   <div class="section">
     <div class="section-header">
-      <div class="section-icon icon-sand">🎒</div>
+      <div class="section-icon ic-sand">🎒</div>
       <h2>What to Bring</h2>
     </div>
-    <p>Recommended items for Castle Creek:</p>
+    <p>Recommended items for playing in the sand and water at Castle Creek:</p>
     <div class="checklist">
-      <span class="checklist-item">💧 Lots of water</span>
-      <span class="checklist-item">🥪 Lunch &amp; snacks</span>
-      <span class="checklist-item">🧴 Sunscreen</span>
-      <span class="checklist-item">👒 Hat</span>
-      <span class="checklist-item">🩱 Swimsuit</span>
-      <span class="checklist-item">🧦 Extra socks (hot sand!)</span>
-      <span class="checklist-item">🏂 Sandboard / sled</span>
-      <span class="checklist-item">🪣 Sand toys (kids)</span>
-      <span class="checklist-item">🥏 Frisbee / volleyball</span>
-      <span class="checklist-item">🎮 Spike-it / lawn games</span>
+      <span class="chip">💧 Lots of water</span>
+      <span class="chip">🥪 Lunch &amp; snacks</span>
+      <span class="chip">🧴 Sunscreen</span>
+      <span class="chip">👒 Hat</span>
+      <span class="chip">🩱 Swimsuit</span>
+      <span class="chip">🧦 Extra socks (hot sand!)</span>
+      <span class="chip">🏂 Sandboard / sled</span>
+      <span class="chip">🪣 Sand toys for kids</span>
+      <span class="chip">🥏 Frisbee / volleyball</span>
+      <span class="chip">🎮 Spike-it / lawn games</span>
     </div>
   </div>
 
-  <!-- RSVP -->
-
   <div class="section">
     <div class="section-header">
-      <div class="section-icon icon-sage">📋</div>
+      <div class="section-icon ic-sage">📋</div>
       <h2>RSVP</h2>
     </div>
     <p>Max is roughly <strong>70 people</strong> across both sites (soft limit — all are welcome). Head count helps with breakfast planning.</p>
-    <p><a class="info-link" href="https://docs.google.com/forms/d/e/1FAIpQLSc0I_ia9Nx4JeR2uDEms7ZEaiinhFmMoWIin_Qvfl1x8kaNjg/viewform?usp=dialog" target="_blank">Fill out the attendance form →</a></p>
+    <p><a class="text-link" href="https://docs.google.com/forms/d/e/1FAIpQLSc0I_ia9Nx4JeR2uDEms7ZEaiinhFmMoWIin_Qvfl1x8kaNjg/viewform?usp=dialog" target="_blank">Fill out the attendance form →</a></p>
   </div>
 
 </div>
 
 <div class="footer">
-  Questions? Contact <strong>Evan</strong> · Black Forest Ward Campout 2025
+  Questions? Contact <strong>Evan</strong> &nbsp;·&nbsp; Black Forest Ward Campout 2026
 </div>
 
 </body>

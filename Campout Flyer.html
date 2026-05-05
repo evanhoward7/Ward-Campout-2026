@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Black Forest Ward Campout Flyer</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+background: #c8bfa8;
+display: flex;
+justify-content: center;
+align-items: flex-start;
+min-height: 100vh;
+padding: 2rem 1rem;
+font-family: ‘Lato’, sans-serif;
+}
+
+.flyer {
+width: 680px;
+background: #fdf6e3;
+box-shadow: 0 8px 40px rgba(0,0,0,0.35);
+overflow: hidden;
+position: relative;
+}
+
+/* ── HERO ── */
+.hero {
+background: linear-gradient(170deg, #1a2a3a 0%, #2c4a60 55%, #4a7a96 100%);
+color: white;
+padding: 2.8rem 2.5rem 2.2rem;
+position: relative;
+text-align: center;
+}
+
+/* dune silhouette */
+.hero::after {
+content: ‘’;
+position: absolute;
+bottom: 0; left: 0; right: 0;
+height: 55px;
+background: url(“data:image/svg+xml,%3Csvg xmlns=‘http://www.w3.org/2000/svg’ viewBox=‘0 0 680 55’%3E%3Cpath d=‘M0,55 Q80,5 180,28 Q280,50 380,18 Q480,-5 560,25 Q620,45 680,15 L680,55 Z’ fill=’%23e8d5a3’ opacity=‘0.3’/%3E%3Cpath d=‘M0,55 Q100,20 220,38 Q340,55 440,30 Q530,10 620,35 L680,45 L680,55 Z’ fill=’%23fdf6e3’/%3E%3C/svg%3E”);
+background-size: cover;
+}
+
+.ward-tag {
+font-size: 0.65rem;
+font-weight: 900;
+letter-spacing: 0.3em;
+text-transform: uppercase;
+color: #e8d5a3;
+margin-bottom: 0.6rem;
+}
+
+.hero h1 {
+font-family: ‘Playfair Display’, serif;
+font-size: 3rem;
+font-weight: 900;
+line-height: 1.1;
+text-shadow: 0 3px 20px rgba(0,0,0,0.4);
+margin-bottom: 0.3rem;
+}
+
+.hero h1 em {
+font-style: italic;
+color: #e8d5a3;
+}
+
+.hero-location {
+font-size: 0.9rem;
+font-weight: 300;
+letter-spacing: 0.08em;
+opacity: 0.85;
+margin-bottom: 1.2rem;
+}
+
+.date-pill {
+display: inline-block;
+background: #c0392b;
+color: white;
+font-family: ‘Playfair Display’, serif;
+font-weight: 700;
+font-size: 1.15rem;
+padding: 0.45rem 1.6rem;
+letter-spacing: 0.03em;
+}
+
+/* ── BODY ── */
+.body {
+padding: 2rem 2.5rem;
+}
+
+/* Info grid */
+.info-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 1rem;
+margin-bottom: 1.8rem;
+}
+
+.info-card {
+background: white;
+border: 1px solid #e0d8c8;
+border-top: 3px solid var(–accent);
+padding: 0.9rem 1rem;
+border-radius: 2px;
+}
+
+.info-card h3 {
+font-size: 0.65rem;
+font-weight: 900;
+letter-spacing: 0.2em;
+text-transform: uppercase;
+color: var(–accent);
+margin-bottom: 0.3rem;
+}
+
+.info-card p {
+font-size: 0.88rem;
+line-height: 1.5;
+color: #2c3e50;
+}
+
+.info-card p strong { font-weight: 700; }
+
+/* Highlights strip */
+.highlights {
+background: #2c4a60;
+color: white;
+padding: 1rem 1.5rem;
+border-radius: 2px;
+margin-bottom: 1.8rem;
+display: flex;
+flex-wrap: wrap;
+gap: 0.5rem 1.5rem;
+}
+
+.highlights h3 {
+width: 100%;
+font-size: 0.65rem;
+font-weight: 900;
+letter-spacing: 0.25em;
+text-transform: uppercase;
+color: #e8d5a3;
+margin-bottom: 0.3rem;
+}
+
+.highlight-item {
+font-size: 0.85rem;
+display: flex;
+align-items: center;
+gap: 0.4rem;
+opacity: 0.92;
+}
+
+.highlight-item .dot {
+width: 6px; height: 6px;
+border-radius: 50%;
+background: #e8d5a3;
+flex-shrink: 0;
+}
+
+/* ── QR SECTION ── */
+.qr-section {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 1.2rem;
+margin-bottom: 1.5rem;
+}
+
+.qr-card {
+background: white;
+border: 1px solid #e0d8c8;
+border-radius: 4px;
+padding: 1.1rem 1rem;
+text-align: center;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.qr-label {
+font-size: 0.65rem;
+font-weight: 900;
+letter-spacing: 0.2em;
+text-transform: uppercase;
+margin-bottom: 0.7rem;
+}
+
+.qr-label.details-label { color: #2c4a60; }
+.qr-label.rsvp-label { color: #5d8a6a; }
+
+.qr-box {
+width: 140px;
+height: 140px;
+margin: 0 auto 0.7rem;
+border: 2px solid #e0d8c8;
+padding: 6px;
+border-radius: 2px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.qr-box canvas, .qr-box img { max-width: 100%; max-height: 100%; }
+
+.qr-desc {
+font-size: 0.78rem;
+color: #666;
+line-height: 1.4;
+}
+
+.qr-icon {
+font-size: 1.6rem;
+margin-bottom: 0.3rem;
+}
+
+/* ── FOOTER ── */
+.flyer-footer {
+background: #e8d5a3;
+text-align: center;
+padding: 0.7rem;
+font-size: 0.75rem;
+font-weight: 700;
+color: #2c3e50;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+}
+
+@media print {
+body { background: none; padding: 0; }
+.flyer { box-shadow: none; width: 100%; }
+}
+</style>
+
+</head>
+<body>
+<div class="flyer">
+
+  <!-- HERO -->
+
+  <div class="hero">
+    <div class="ward-tag">Black Forest Ward</div>
+    <h1>Great Sand Dunes<br><em>Campout 2026</em></h1>
+    <div class="hero-location">Great Sand Dunes Oasis · Group Sites 2 &amp; 3</div>
+    <div class="date-pill">Friday – Saturday · May 15–16, 2026</div>
+  </div>
+
+  <!-- BODY -->
+
+  <div class="body">
+
+```
+<div class="info-grid">
+  <div class="info-card" style="--accent: #2c4a60">
+    <h3>📍 Campground</h3>
+    <p>Great Sand Dunes Oasis, just outside the park entrance. <strong>Primitive sites only</strong> — tents &amp; small trailers. Road is narrow/rough.</p>
+  </div>
+  <div class="info-card" style="--accent: #c0392b">
+    <h3>💵 Check-In</h3>
+    <p><strong>$7/person</strong> at the main office. Say you're with the <strong>Black Forest church group</strong>. After 7 PM? Directions will be posted on office door.</p>
+  </div>
+  <div class="info-card" style="--accent: #5d8a6a">
+    <h3>🌅 Saturday</h3>
+    <p><strong>8 AM</strong> Group breakfast · <strong>11 AM</strong> Break camp · Then head to <strong>Castle Creek Picnic Area</strong> in the park.</p>
+  </div>
+  <div class="info-card" style="--accent: #c0392b">
+    <h3>🚗 Castle Creek</h3>
+    <p><strong>4WD + high clearance required</strong> (NOT AWD). 2.6 mi down Medano Pass Primitive Road. Consolidate vehicles &amp; go early!</p>
+  </div>
+</div>
+
+<div class="highlights">
+  <h3>What to Bring to Castle Creek</h3>
+  <div class="highlight-item"><span class="dot"></span>Lots of water &amp; lunch</div>
+  <div class="highlight-item"><span class="dot"></span>Sunscreen &amp; hat</div>
+  <div class="highlight-item"><span class="dot"></span>Swimsuit &amp; extra socks</div>
+  <div class="highlight-item"><span class="dot"></span>Sandboard or sled</div>
+  <div class="highlight-item"><span class="dot"></span>National Park permit</div>
+  <div class="highlight-item"><span class="dot"></span>Sand toys &amp; lawn games</div>
+</div>
+
+<!-- QR CODES -->
+<div class="qr-section">
+  <div class="qr-card">
+    <div class="qr-label details-label">📋 Full Details &amp; Links</div>
+    <div class="qr-box" id="qr-details"></div>
+    <div class="qr-desc">Scan for directions, maps, itinerary &amp; everything you need</div>
+  </div>
+  <div class="qr-card">
+    <div class="qr-label rsvp-label">✅ RSVP / Attendance</div>
+    <div class="qr-box" id="qr-rsvp"></div>
+    <div class="qr-desc">Scan to let us know you're coming &amp; your group size</div>
+  </div>
+</div>
+```
+
+  </div>
+
+  <div class="flyer-footer">Questions? Contact Evan &nbsp;·&nbsp; All are welcome!</div>
+
+</div>
+
+<script>
+  // QR 1 — Details page (placeholder URL — replace with your hosted link)
+  new QRCode(document.getElementById("qr-details"), {
+    text: "https://campout-details.html",  // ← REPLACE with your hosted URL
+    width: 128,
+    height: 128,
+    colorDark: "#1a2a3a",
+    colorLight: "#ffffff",
+    correctLevel: QRCode.CorrectLevel.M
+  });
+
+  // QR 2 — Google Form RSVP
+  new QRCode(document.getElementById("qr-rsvp"), {
+    text: "https://docs.google.com/forms/d/e/1FAIpQLSc0I_ia9Nx4JeR2uDEms7ZEaiinhFmMoWIin_Qvfl1x8kaNjg/viewform?usp=dialog",
+    width: 128,
+    height: 128,
+    colorDark: "#2d6a4f",
+    colorLight: "#ffffff",
+    correctLevel: QRCode.CorrectLevel.M
+  });
+</script>
+
+</body>
+</html>

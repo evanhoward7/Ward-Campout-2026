@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Black Forest Ward Campout 2025</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sand: #e8d5a3;
+    --dusk: #2c3e50;
+    --rust: #c0392b;
+    --sage: #5d8a6a;
+    --sky: #5b8fa8;
+    --cream: #fdf6e3;
+    --dark: #1a1a2e;
+  }
+
+- { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+background: var(–cream);
+color: var(–dusk);
+font-family: ‘Lato’, sans-serif;
+font-weight: 300;
+line-height: 1.7;
+}
+
+/* Hero */
+.hero {
+background: linear-gradient(160deg, var(–dusk) 0%, #3d5a73 50%, var(–sky) 100%);
+color: white;
+padding: 3rem 1.5rem 4rem;
+text-align: center;
+position: relative;
+overflow: hidden;
+}
+
+.hero::before {
+content: ‘’;
+position: absolute;
+bottom: 0; left: 0; right: 0;
+height: 80px;
+background: url(“data:image/svg+xml,%3Csvg xmlns=‘http://www.w3.org/2000/svg’ viewBox=‘0 0 1200 80’%3E%3Cpath d=‘M0,80 Q150,20 300,50 Q450,80 600,40 Q750,0 900,50 Q1050,80 1200,30 L1200,80 Z’ fill=’%23fdf6e3’/%3E%3C/svg%3E”);
+background-size: cover;
+}
+
+.ward-label {
+font-family: ‘Lato’, sans-serif;
+font-weight: 700;
+font-size: 0.75rem;
+letter-spacing: 0.25em;
+text-transform: uppercase;
+color: var(–sand);
+margin-bottom: 0.5rem;
+}
+
+.hero h1 {
+font-family: ‘Playfair Display’, serif;
+font-size: clamp(2.2rem, 6vw, 3.8rem);
+font-weight: 900;
+line-height: 1.15;
+margin-bottom: 0.5rem;
+text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+
+.hero h1 span { color: var(–sand); }
+
+.hero-sub {
+font-size: 1.1rem;
+font-weight: 300;
+opacity: 0.9;
+margin-bottom: 1.5rem;
+}
+
+.date-badge {
+display: inline-block;
+background: var(–rust);
+color: white;
+font-family: ‘Playfair Display’, serif;
+font-size: 1.2rem;
+font-weight: 700;
+padding: 0.5rem 1.5rem;
+border-radius: 2px;
+letter-spacing: 0.05em;
+}
+
+/* RSVP Banner */
+.rsvp-banner {
+background: var(–sage);
+color: white;
+text-align: center;
+padding: 1.2rem;
+}
+
+.rsvp-banner a {
+color: white;
+font-weight: 700;
+font-size: 1.1rem;
+text-decoration: none;
+border-bottom: 2px solid rgba(255,255,255,0.5);
+padding-bottom: 2px;
+}
+
+.rsvp-banner a:hover { border-color: white; }
+
+/* Content */
+.container {
+max-width: 780px;
+margin: 0 auto;
+padding: 2.5rem 1.5rem;
+}
+
+.intro-note {
+background: #fff8e8;
+border-left: 4px solid var(–rust);
+padding: 1rem 1.2rem;
+margin-bottom: 2.5rem;
+font-size: 0.95rem;
+border-radius: 0 4px 4px 0;
+}
+
+/* Sections */
+.section {
+margin-bottom: 2.5rem;
+padding-bottom: 2.5rem;
+border-bottom: 1px solid #e0d8c8;
+}
+
+.section:last-child { border-bottom: none; }
+
+.section-header {
+display: flex;
+align-items: center;
+gap: 0.8rem;
+margin-bottom: 0.8rem;
+}
+
+.section-icon {
+width: 36px;
+height: 36px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 1.1rem;
+flex-shrink: 0;
+}
+
+.icon-sand { background: #f0e6cc; }
+.icon-sky  { background: #d4e8f0; }
+.icon-sage { background: #d4e8da; }
+.icon-rust { background: #f0d4d4; }
+
+.section h2 {
+font-family: ‘Playfair Display’, serif;
+font-size: 1.35rem;
+font-weight: 700;
+color: var(–dusk);
+}
+
+.section p { margin-bottom: 0.8rem; font-size: 0.97rem; }
+.section p:last-child { margin-bottom: 0; }
+
+/* Links */
+a.map-link {
+display: inline-flex;
+align-items: center;
+gap: 0.4rem;
+background: var(–sky);
+color: white;
+padding: 0.35rem 0.9rem;
+border-radius: 20px;
+font-size: 0.85rem;
+font-weight: 700;
+text-decoration: none;
+margin-top: 0.4rem;
+transition: background 0.2s;
+}
+
+a.map-link:hover { background: var(–dusk); }
+
+a.info-link {
+color: var(–sky);
+font-weight: 700;
+text-decoration: none;
+border-bottom: 1px dashed var(–sky);
+}
+
+/* Checklist */
+.checklist {
+display: flex;
+flex-wrap: wrap;
+gap: 0.5rem;
+margin-top: 0.8rem;
+}
+
+.checklist-item {
+background: var(–cream);
+border: 1px solid #d8cbb0;
+border-radius: 20px;
+padding: 0.3rem 0.85rem;
+font-size: 0.88rem;
+font-weight: 400;
+}
+
+/* Warning box */
+.warning-box {
+background: #fff3e0;
+border: 1px solid #f5a623;
+border-radius: 6px;
+padding: 0.9rem 1.1rem;
+font-size: 0.93rem;
+margin-top: 0.8rem;
+}
+
+.warning-box strong { color: #c85000; }
+
+/* Itinerary timeline */
+.timeline {
+margin-top: 0.8rem;
+padding-left: 1rem;
+border-left: 3px solid var(–sand);
+}
+
+.timeline-item {
+position: relative;
+padding: 0.4rem 0 0.4rem 1rem;
+font-size: 0.95rem;
+}
+
+.timeline-item::before {
+content: ‘’;
+position: absolute;
+left: -1.45rem;
+top: 50%;
+transform: translateY(-50%);
+width: 10px;
+height: 10px;
+border-radius: 50%;
+background: var(–rust);
+border: 2px solid var(–cream);
+}
+
+.timeline-time {
+font-weight: 700;
+color: var(–rust);
+margin-right: 0.5rem;
+}
+
+/* Footer */
+.footer {
+background: var(–dusk);
+color: rgba(255,255,255,0.7);
+text-align: center;
+padding: 1.5rem;
+font-size: 0.85rem;
+}
+
+.footer strong { color: white; }
+
+@media (max-width: 500px) {
+.hero { padding: 2rem 1rem 3rem; }
+}
+</style>
+
+</head>
+<body>
+
+<div class="hero">
+  <div class="ward-label">Black Forest Ward</div>
+  <h1>Great Sand Dunes<br><span>Campout 2025</span></h1>
+  <div class="hero-sub">Great Sand Dunes Oasis Campground</div>
+  <div class="date-badge">May 15–16, 2025</div>
+</div>
+
+<div class="rsvp-banner">
+  📋 <a href="https://docs.google.com/forms/d/e/1FAIpQLSc0I_ia9Nx4JeR2uDEms7ZEaiinhFmMoWIin_Qvfl1x8kaNjg/viewform?usp=dialog" target="_blank">RSVP Here — Let us know your group size!</a>
+</div>
+
+<div class="container">
+
+  <div class="intro-note">
+    If you've already let Evan know you're coming, you don't need to fill out the RSVP form. The head count helps with breakfast planning!
+  </div>
+
+  <!-- Campground -->
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon icon-sage">⛺</div>
+      <h2>Campground</h2>
+    </div>
+    <p>We're staying at <strong>The Great Sand Dunes Oasis</strong>, located just a couple miles outside the park entrance. We have <strong>Group Sites 2 &amp; 3</strong> on the upper loop — primitive sites only.</p>
+    <p>Good for tents and maybe small travel trailers, but the road is tight and rough. <strong>Don't bring anything large</strong> — it may be damaged by trees/brush and difficult to fit.</p>
+    <a class="map-link" href="https://goo.gl/maps/MXX5sXKrXr8dZyMb8" target="_blank">📍 Campground Directions</a>
+    &nbsp;
+    <a class="map-link" href="https://greatdunes.com/blog/" target="_blank">🗺 Campground Map</a>
+  </div>
+
+  <!-- Check In -->
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon icon-sky">✅</div>
+      <h2>Check-In</h2>
+    </div>
+    <p>Everyone must <strong>check in at the main office</strong> before proceeding to camp. There is a <strong>$7/person charge</strong>. Tell them you're with the Black Forest church group — reservation is also under <strong>Evan's name</strong>.</p>
+    <div class="warning-box">
+      <strong>Arriving after 7:00 PM?</strong> The office may be closed. There will be directions posted on the office door to Group Sites 2 &amp; 3. Please stop by the next morning to pay.
+    </div>
+  </div>
+
+  <!-- Itinerary -->
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon icon-sand">📅</div>
+      <h2>Itinerary</h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item"><span class="timeline-time">Friday eve</span> Arrive, get settled. Campfires planned (no fire bans currently).</div>
+      <div class="timeline-item"><span class="timeline-time">Sat 8:00 AM</span> Group breakfast at camp.</div>
+      <div class="timeline-item"><span class="timeline-time">Sat 11:00 AM</span> Break camp — must be out of group site by 11 AM.</div>
+      <div class="timeline-item"><span class="timeline-time">Saturday</span> Head into Great Sand Dunes National Park to Castle Creek Picnic Area.</div>
+    </div>
+  </div>
+
+  <!-- The Park -->
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon icon-sky">🏜</div>
+      <h2>Great Sand Dunes National Park</h2>
+    </div>
+    <p>Hopefully Medano Creek will be flowing! <strong>A National Park permit is required</strong> to enter. There's a large parking lot where you can hike to the dunes or stage a vehicle.</p>
+    <a class="map-link" href="https://goo.gl/maps/S33XmCmgiLY95kpM7" target="_blank">📍 Parking Lot Directions</a>
+  </div>
+
+  <!-- Castle Creek -->
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon icon-rust">🏔</div>
+      <h2>Castle Creek Picnic Area</h2>
+    </div>
+    <p>Our Saturday destination — a great spot with picnic tables and bathrooms where we can play in the creek and sand. Located <strong>2.6 miles down the Medano Pass Primitive Road</strong>.</p>
+    <div class="warning-box">
+      <strong>4WD required</strong> (NOT all-wheel drive) with high clearance. You may need to air down tires. There's an air compressor at the start of the primitive road. <strong>Parking is limited — consolidate vehicles at the main lot</strong> and go early!
+    </div>
+    <br>
+    <a class="map-link" href="https://www.nps.gov/grsa/planyourvisit/medano-pass-road.htm" target="_blank">ℹ️ Medano Pass Info</a>
+    &nbsp;
+    <a class="map-link" href="https://goo.gl/maps/Pviux2pmhTAdjczx5" target="_blank">📍 Castle Creek Directions</a>
+  </div>
+
+  <!-- Packing List -->
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon icon-sand">🎒</div>
+      <h2>What to Bring</h2>
+    </div>
+    <p>Recommended items for Castle Creek:</p>
+    <div class="checklist">
+      <span class="checklist-item">💧 Lots of water</span>
+      <span class="checklist-item">🥪 Lunch &amp; snacks</span>
+      <span class="checklist-item">🧴 Sunscreen</span>
+      <span class="checklist-item">👒 Hat</span>
+      <span class="checklist-item">🩱 Swimsuit</span>
+      <span class="checklist-item">🧦 Extra socks (hot sand!)</span>
+      <span class="checklist-item">🏂 Sandboard / sled</span>
+      <span class="checklist-item">🪣 Sand toys (kids)</span>
+      <span class="checklist-item">🥏 Frisbee / volleyball</span>
+      <span class="checklist-item">🎮 Spike-it / lawn games</span>
+    </div>
+  </div>
+
+  <!-- RSVP -->
+
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon icon-sage">📋</div>
+      <h2>RSVP</h2>
+    </div>
+    <p>Max is roughly <strong>70 people</strong> across both sites (soft limit — all are welcome). Head count helps with breakfast planning.</p>
+    <p><a class="info-link" href="https://docs.google.com/forms/d/e/1FAIpQLSc0I_ia9Nx4JeR2uDEms7ZEaiinhFmMoWIin_Qvfl1x8kaNjg/viewform?usp=dialog" target="_blank">Fill out the attendance form →</a></p>
+  </div>
+
+</div>
+
+<div class="footer">
+  Questions? Contact <strong>Evan</strong> · Black Forest Ward Campout 2025
+</div>
+
+</body>
+</html>
